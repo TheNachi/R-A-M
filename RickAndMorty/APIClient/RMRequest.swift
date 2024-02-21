@@ -17,7 +17,7 @@ final class RMRequest {
     private let pathComponents: [String]
     private let queryParameters: [URLQueryItem]
     
-    /// CConstructed url for the api request in string format
+    /// Constructed url for the api request in string format
     private var urlString: String {
         var string = Constants.baseUrl
         string += "/"
@@ -56,4 +56,8 @@ final class RMRequest {
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
     }
+}
+
+extension RMRequest {
+    static let listCharactersRequests = RMRequest(endpoint: .character)
 }
